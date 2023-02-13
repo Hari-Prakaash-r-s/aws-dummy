@@ -3,7 +3,6 @@ HELP.md
 build/
 .idea
 .DS_Store
- gradlew
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
