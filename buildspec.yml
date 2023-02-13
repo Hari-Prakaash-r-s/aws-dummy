@@ -5,8 +5,8 @@ env:
 phases:
   install:
     commands:
-      - sudo yum update
-      - sudo yum install java-17-amazon-corretto
+      - yum update
+      - yum install java-17-amazon-corretto
   build:
     commands:
       - ./gradlew clean build
