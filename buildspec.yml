@@ -8,10 +8,11 @@ install:
       - ./gradlew build
   post_build:
     commands:
+      - cp ./build/libs/demo-0.0.1-SNAPSHOT.jar ./base-dir
       - echo Build completed
 artifacts:
   files:
-    - build/libs/demo-0.0.1-SNAPSHOT.jar
+    - base-dir/demo-0.0.1-SNAPSHOT.jar
     - scripts/*.sh
     - appspec.yml
   discard-paths: yes
