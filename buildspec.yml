@@ -10,7 +10,7 @@ install:
       - echo Build completed
 artifacts:
   files:
-    - build/libs/*.jar
+    - build/libs/demo-0.0.1-SNAPSHOT.jar
     - scripts/*.sh
     - appspec.yml
   discard-paths: yes
