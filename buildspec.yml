@@ -4,7 +4,8 @@ install:
     java: corretto11
   build:
     commands:
-      - ./gradlew build --scan
+      - chmod +x ./gradlew
+      - ./gradlew build
   post_build:
     commands:
       - echo Build completed
