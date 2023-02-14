@@ -4,15 +4,13 @@ install:
     java: corretto11
   build:
     commands:
-      - chmod +x ./gradlew
-      - ./gradlew build
+      - gradle build
   post_build:
     commands:
-      - cp ./build/libs/demo-0.0.1-SNAPSHOT.jar ./base-dir
       - echo Build completed
 artifacts:
   files:
-    - base-dir/demo-0.0.1-SNAPSHOT.jar
+    - build/libs/demo-0.0.1-SNAPSHOT.jar
     - scripts/*.sh
     - appspec.yml
   discard-paths: yes
