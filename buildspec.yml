@@ -2,11 +2,11 @@ version: 0.2
 install:
   runtime-versions:
     java: corretto11
-  pre_build:
-    commands:
-      - echo Nothing to do in the pre_build phase...
-      - yum install java-17-amazon-corretto-devel -y
-      - alternatives --set java /usr/lib/jvm/java-17-amazon-corretto.aarch64/bin/java
+#  pre_build:
+#    commands:
+#      - echo Nothing to do in the pre_build phase...
+#      - yum install java-17-amazon-corretto-devel -y
+#      - alternatives --set java /usr/lib/jvm/java-17-amazon-corretto.aarch64/bin/java
   build:
     commands:
       - ./gradlew clean build
@@ -15,8 +15,7 @@ install:
       - echo Build completed
 artifacts:
   files:
-#    - build/libs/demo-0.0.1-SNAPSHOT.jar
-#    - scripts/*.sh
-#    - appspec.yml
-     - '**/*'
+    - build/libs/demo-0.0.1-SNAPSHOT.jar
+    - scripts/*.sh
+    - appspec.yml
   discard-paths: yes
