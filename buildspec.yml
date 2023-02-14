@@ -2,9 +2,14 @@ version: 0.2
 install:
   runtime-versions:
     java: corretto11
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase...
+      - yum install java-17-amazon-corretto-devel -y
+      - alternatives --set java /usr/lib/jvm/java-17-amazon-corretto.aarch64/bin/java
   build:
     commands:
-      - gradle build
+      - ./gradlew build
   post_build:
     commands:
       - echo Build completed
