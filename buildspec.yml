@@ -9,7 +9,7 @@ install:
       - alternatives --set java /usr/lib/jvm/java-17-amazon-corretto.aarch64/bin/java
   build:
     commands:
-      - ./gradlew build
+      - ./gradlew clean build
   post_build:
     commands:
       - echo Build completed

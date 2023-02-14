@@ -1,6 +1,5 @@
 HELP.md
 .gradle
-build/
 .idea
 .DS_Store
 !gradle/wrapper/gradle-wrapper.jar
